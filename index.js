@@ -18,7 +18,9 @@ function comparar(array, condicion) {
     let nuevoArray = array.filter(x => typeof(x) === condicion);
     
     // se ordena de manera ascendente
-    nuevoArray.sort((a, b) => a - b);
+    condicion ==="number" ? 
+      nuevoArray.sort((a, b) => a - b) :
+      nuevoArray.sort();
 
     // se eliminan datos duplicados
     nuevoArray = [...new Set(nuevoArray)];
